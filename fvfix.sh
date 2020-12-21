@@ -22,7 +22,7 @@ echo "Key was successfully escrowed"
 
 #SecureTokenCheck
 if [ $Admin = $FVAdminCheck ]; then
-   sudo jamf policy -trigger hvadmin48Removal
+   sudo jamf policy -trigger OldAdminRemoval
    echo "$OldAdmin was removed"
   else
   	   exit 1
@@ -33,7 +33,7 @@ fi
 if [ $TempAcc =  ]; then
    sudo jamf policy -trigger hvadmin481Removal
   else
-  	   echo "hvadmin481 was not found"
+  	   echo "OldAdmin was not found"
 fi
 
 #Remove Jamf Log
